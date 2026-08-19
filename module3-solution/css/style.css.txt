@@ -1,0 +1,66 @@
+/* Estilos Generales de la Barra de Navegación */
+.navbar {
+  background-color: #a9a9a9; /* Gris oscuro para el navbar */
+  border-radius: 0;
+  border: 0;
+  margin-bottom: 20px;
+}
+
+.navbar-brand {
+  color: #000000 !important;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* Estilos del Botón de Menú Móvil (Hamburguesa) */
+.navbar-toggle {
+  border-color: #000000;
+  background-color: transparent;
+}
+
+.navbar-toggle .icon-bar {
+  background-color: #000000;
+}
+
+/* Estilos del Menú Desplegable en Móvil */
+#collapsable-nav {
+  background-color: #ffffff; /* Fondo blanco para diferenciarlo */
+  border-top: 1px solid #000000;
+}
+
+#collapsable-nav ul li a {
+  color: #000000;
+  font-size: 18px;
+  font-weight: 500;
+  border-bottom: 1px solid #000000;
+  padding: 10px 0;
+}
+
+#collapsable-nav ul li:last-child a {
+  border-bottom: none;
+}
+
+/* Título de la Página */
+h1 {
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+/* Caja de Contenido Principal */
+#main-content {
+  background-color: #999999; /* Gris de fondo según la maqueta */
+  padding: 20px;
+  min-height: 1000px; /* Garantiza que sea lo suficientemente alto para hacer scroll */
+  color: #000000;
+}
+
+#main-content h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+#main-content p {
+  font-size: 16px;
+  line-height: 1.6;
+}
