@@ -18,8 +18,8 @@ var categoriesTitleHtml = "snippets/categories-title-snippet.html";
 var categoryHtml = "snippets/category-snippet.html";
 var menuItemsUrl =
   "https://coursera-jhu-default-rtdb.firebaseio.com/menu_items/";
-var menuItemsTitleHtml = "snippets/menu-items-title-snippet.html";
-var menuItemHtml = "snippets/menu-item-snippet.html";
+var menuItemsTitleHtml = "snippets/menu-items-title.html";
+var menuItemHtml = "snippets/menu-item.html";
 
 var insertHtml = function (selector, html) {
   var targetElem = document.querySelector(selector);
