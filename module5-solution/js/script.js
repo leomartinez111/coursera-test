@@ -83,8 +83,11 @@ function buildAndShowHomeHTML (categories) {
       var randomCategoryShortName = chooseRandomCategory(categories).short_name;
 
       // TODO: STEP 3: Substitute {{randomCategoryShortName}} with the chosen category
-      // NOTA: Se pasa la variable limpia sin comillas adicionales.
-      var homeHtmlToInsertIntoPage = insertProperty(homeHtml, "randomCategoryShortName", randomCategoryShortName);
+      var homeHtmlToInsertIntoPage = insertProperty(
+        homeHtml,
+        "randomCategoryShortName",
+        "'" + randomCategoryShortName + "'"
+      );
 
       // TODO: STEP 4: Insert the produced HTML into the main container
       insertHtml("#main-content", homeHtmlToInsertIntoPage);
