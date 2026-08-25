@@ -63,19 +63,17 @@ function buildAndShowHomeHTML (categories) {
     homeHtmlUrl,
     function (homeHtml) {
       var randomCategoryShortName = chooseRandomCategory(categories).short_name;
-      
-      // Envolvemos entre comillas simples para que el HTML genere: $dc.loadMenuItems('SP');
+
       var homeHtmlToInsertIntoPage = insertProperty(
         homeHtml,
         "randomCategoryShortName",
-        "'" + randomCategoryShortName + "'"
+        randomCategoryShortName
       );
-      
+
       insertHtml("#main-content", homeHtmlToInsertIntoPage);
     },
     false);
 }
-
 function chooseRandomCategory (categories) {
   var randomIndex = Math.floor(Math.random() * categories.length);
   return categories[randomIndex];
