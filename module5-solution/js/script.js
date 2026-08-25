@@ -64,10 +64,10 @@ function buildAndShowHomeHTML (categories) {
     function (homeHtml) {
       var randomCategoryShortName = chooseRandomCategory(categories).short_name;
       var homeHtmlToInsertIntoPage = insertProperty(
-        homeHtml, 
-        "randomCategoryShortName", 
-        "'" + randomCategoryShortName + "'"
-      );
+  homeHtml, 
+  "randomCategoryShortName", 
+  randomCategoryShortName
+);
       insertHtml("#main-content", homeHtmlToInsertIntoPage);
     },
     false);
