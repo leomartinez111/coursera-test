@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 showLoading("#main-content");
 $ajaxUtils.sendGetRequest(
   allCategoriesUrl,
-  buildAndShowHomeHTML, // STEP 1 modified this line
+  buildAndShowHomeHTML,
   true); // Explicitly setting the response to be processed as JSON
 });
 
@@ -83,8 +83,7 @@ function buildAndShowHomeHTML (categories) {
       var randomCategoryShortName = chooseRandomCategory(categories).short_name;
 
       // TODO: STEP 3: Substitute {{randomCategoryShortName}} with the chosen category
-      // Asignamos las comillas simples que requiere el manejador onclick
-      randomCategoryShortName = "'" + randomCategoryShortName + "'";
+      // NOTA: Se pasa la variable limpia sin comillas adicionales.
       var homeHtmlToInsertIntoPage = insertProperty(homeHtml, "randomCategoryShortName", randomCategoryShortName);
 
       // TODO: STEP 4: Insert the produced HTML into the main container
