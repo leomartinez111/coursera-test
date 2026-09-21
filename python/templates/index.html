@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Emotion Detection App</title>
+    <script>
+        let RunSentiment = ()=>{
+            textToAnalyze = document.getElementById("textToAnalyze").value;
+
+            let xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("system_response").innerHTML = xhttp.responseText;
+                }
+            };
+            xhttp.open("GET", "/emotionDetector?textToAnalyze=" + textToAnalyze, true);
+            xhttp.send();
+        }
+    </script>
+</head>
+<body>
+    <h1>Emotion Detector Application</h1>
+    <label for="textToAnalyze">Enter Text for Emotion Detection:</label><br><br>
+    <textarea id="textToAnalyze" name="textToAnalyze" rows="4" cols="50"></textarea><br><br>
+    <button onclick="RunSentiment()">Run Sentiment</button>
+    <br><br>
+    <div id="system_response"></div>
+</body>
+</html>
